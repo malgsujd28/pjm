@@ -37,8 +37,12 @@ var success = document.getElementById('lead-success');
 var FORM_ID = 'zapis_kurs_pjm';
 var started = false;
 
-form.addEventListener('input', startOnce);
-form.addEventListener('change', startOnce);
+// Formularz jest tylko na stronie głównej – na podstronach pomijamy tę część
+if (form) {
+  form.addEventListener('input', startOnce);
+  form.addEventListener('change', startOnce);
+  form.addEventListener('submit', onSubmit);
+}
 function startOnce() {
   if (started) return;
   started = true;
@@ -74,7 +78,7 @@ function validate() {
   return !firstBad;
 }
 
-form.addEventListener('submit', function (e) {
+function onSubmit(e) {
   e.preventDefault(); // brak wysyłki i brak danych w adresie URL
   if (!validate()) return;
 
@@ -89,7 +93,7 @@ form.addEventListener('submit', function (e) {
   form.hidden = true;
   success.hidden = false;
   success.focus();
-});
+}
 
 /* 4. Zmiana zgód – działa po instalacji Cookiebot (spotkanie 3) */
 document.getElementById('consent-settings').addEventListener('click', function () {

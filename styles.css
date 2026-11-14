@@ -142,8 +142,7 @@ input[aria-invalid="true"], select[aria-invalid="true"] { border-color: var(--er
 .trivia li { break-inside: avoid; padding: 1.25rem 0; border-top: 2px solid var(--ink); }
 .trivia h3 { font-weight: 800; font-size: 1.3rem; }
 .trivia p { color: var(--muted); margin: 0; max-width: 34rem; }
-.trivia__cta { margin: 2rem 0 1rem; }
-.trivia__src { font-size: .85rem; color: var(--muted); max-width: 46rem; }
+.trivia__src { margin-top: 1rem; font-size: .85rem; color: var(--muted); max-width: 46rem; }
 
 /* Footer */
 .foot { padding: 3rem 0 4rem; font-size: .95rem; color: var(--muted); border-top: 1px solid var(--line); }
@@ -157,11 +156,4 @@ input[aria-invalid="true"], select[aria-invalid="true"] { border-color: var(--er
   .letters span { font-size: 3.5rem; }
 }
 
-/* Nawigacja i podstrona */
-.top__nav { display: flex; align-items: center; gap: 1.25rem; }
-.top__link { color: var(--ink); font-weight: 700; text-decoration: none; }
-.top__link:hover, .top__link[aria-current="page"] { text-decoration: underline; text-underline-offset: .25em; }
-.block--page { border-top: 0; }
-.block--page h1 { font-size: clamp(2.3rem, 6vw, 3.6rem); margin-bottom: 1.5rem; }
 .trivia__lead { margin: 2.5rem 0 0; font-size: 1.15rem; }
-@media (max-width: 420px) { .top__link { font-size: .95rem; } .top__nav { gap: .75rem; } }
